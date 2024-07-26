@@ -27,6 +27,5 @@ fun electricityBill(units: Int): Double {
     }else if(units > 200){
         finalBill = (100 * 1.0)+ (100*1.5) + ((units - 200) * 2)
     }
-
     return finalBill
 }
