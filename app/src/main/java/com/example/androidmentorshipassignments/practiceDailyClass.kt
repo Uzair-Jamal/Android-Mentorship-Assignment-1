@@ -7,11 +7,30 @@ fun main(){
     // function without arguments
     add1()
     // function with arguments
-    add2(30,23)
+    add2(11,66)
     // function having both arguments and return types
     println(add3(45,11))
     // function with return type only
     println(add4())
+
+    val c = add2()
+    println(c)
+
+    val data = arrayOf(1,2,3,4,5,6,7)
+    println(data[2])
+    println(data.get(4))
+
+    val names = arrayOf("Jhon","Peter","Smith")
+    val names1 = arrayOf("Jhon","Peter","Smith",2,3,5,6)
+    val names2 = intArrayOf(2,3,5,6)
+    println(names[2])
+
+    for(i in names){
+        println(i)
+    }
+    names1.forEach {
+        println(it)
+    }
 
 }
 fun add1(){
@@ -20,7 +39,7 @@ fun add1(){
     val sum = a+b
     println(sum)
 }
-fun add2(a:Int, b:Int){
+fun add2(a:Int=23, b:Int=22){
     val sum = a+b
     println(sum)
 }
