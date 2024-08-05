@@ -11,6 +11,9 @@ fun main(){
     val input = scanner.nextLine()
 
     println(checkPalindrome(input))
+    println(checkPalindrome2nd(input))
+    println(checkPalindrome3rd(input))
+    println(checkPalindrome4th(input))
 }
 
 fun checkPalindrome(input: String):Boolean {
@@ -22,3 +25,30 @@ fun checkPalindrome(input: String):Boolean {
     }
     return false
 }
+
+fun checkPalindrome2nd(input:String):Boolean{
+    if(input.reversed() == input){
+        return true
+    }else{
+        return false
+    }
+}
+
+fun checkPalindrome3rd(input:String):Boolean{
+    val len = input.length
+    for(i in 0..len/2){
+        if(input[i]==input[len - 1 -i]){
+            return true
+        }
+    }
+    return false
+}
+
+fun checkPalindrome4th(input:String):Boolean{
+    var reverseString = ""
+    for(i in input.length - 1 downTo 0){
+        reverseString += input[i]
+    }
+    return reverseString == input
+}
+
